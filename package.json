@@ -38,6 +38,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
+    "gulp-zip": "^4.1.0",
     "postcss-color-function": "^4.0.1",
     "postcss-custom-properties": "^7.0.0",
     "postcss-easy-import": "^3.0.0"
