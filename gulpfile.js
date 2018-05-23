@@ -26,30 +26,23 @@ gulp.task('css', function () {
     return gulp.src('./css/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
-        .pipe(concat('theme.min.css'))
+        .pipe(concat('theme.css'))
         .pipe(gulp.dest('./assets'));
 });
 
-gulp.task('scripts_all', function() {
+gulp.task('scripts', function() {
     return gulp.src(['js/*.js'])
         .pipe(uglify())
-        .pipe(concat('theme_all.min.js'))
-        .pipe(gulp.dest('assets/'));
-});
-
-gulp.task('scripts', function() {
-    return gulp.src(['js/site.js'])
-        .pipe(uglify())
-        .pipe(concat('theme.min.js'))
+        .pipe(concat('theme.js'))
         .pipe(gulp.dest('assets/'));
 });
 
 gulp.task('watch', function () {
     gulp.watch('css/**/*.scss', ['css']);
-    gulp.watch('js/*.js', ['scripts_all', 'scripts']);
+    gulp.watch('js/*.js', ['scripts']);
 });
 
-gulp.task('build', ['css', 'scripts_all', 'scripts'], function () {
+gulp.task('build', ['css', 'scripts'], function () {
 });
 
 gulp.task('zip', ['build'], function() {
