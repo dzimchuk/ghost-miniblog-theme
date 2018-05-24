@@ -1,19 +1,15 @@
-{{!< default}}
-
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
-
-{{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
-
 <article class="post container {{post_class}}{{#unless feature_image}} no-image{{/unless}}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
     <header>
         <h1 itemprop="name headline"><a href="{{url}}" rel="canonical" itemprop="url">{{title}}</a></h1>
         <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">Published {{date format="MMM DD, YYYY"}}</time>
     </header>
 
-    <div itemprop="articleBody mainEntityOfPage">
-        {{content}}
+    <div itemprop="articleBody">
+        {{#if custom_excerpt}}
+            {{excerpt}}
+        {{else}}
+            {{excerpt words="60"}}&hellip;
+        {{/if}}
     </div>
     
     <footer>
@@ -29,9 +25,3 @@ into the {body} of the default.hbs template --}}
         {{/if}}
     </footer>
 </article>
-
-{{> "social-sharing"}}
-
-{{> "disqus"}}
-
-{{/post}}
