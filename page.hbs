@@ -6,19 +6,16 @@ into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<article class="container {{post_class}}{{#unless feature_image}} no-image{{/unless}}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    {{> "post-header"}}
+<article class="container {{post_class}}{{#unless feature_image}} no-image{{/unless}}" itemscope itemprop="staticPage">
+    <header>
+        <h1 itemprop="name headline"><a href="{{url}}" rel="canonical" itemprop="url">{{title}}</a></h1>
+    </header>
 
     <div class="post-full-content" itemprop="articleBody mainEntityOfPage">
         {{content}}
     </div>
-    
-    {{> "post-footer"}}
+
 </article>
-
-{{> "social-sharing"}}
-
-{{> "disqus"}}
 
 {{/post}}
 

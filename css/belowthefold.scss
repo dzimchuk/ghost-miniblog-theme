@@ -95,6 +95,7 @@ noscript p {
         display: inline-block;
         padding: 4px 15px;
         text-decoration: none;
+        border-radius: 4px;
 
         &[rel=next] {
             float: right;

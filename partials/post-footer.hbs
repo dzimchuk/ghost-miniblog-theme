@@ -1,0 +1,12 @@
+<footer>
+    {{#if tags}}
+        <ul class="categories">
+            <li> Posted in </li>
+            {{#foreach tags}}
+            <li itemprop="articleSection">
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+            </li>  
+            {{/foreach}}
+        </ul>
+    {{/if}}
+</footer>

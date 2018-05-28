@@ -1,27 +1,15 @@
-<article class="post container {{post_class}}{{#unless feature_image}} no-image{{/unless}}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <header>
-        <h1 itemprop="name headline"><a href="{{url}}" rel="canonical" itemprop="url">{{title}}</a></h1>
-        <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">Published {{date format="MMM DD, YYYY"}}</time>
-    </header>
+<article class="container {{post_class}}{{#unless feature_image}} no-image{{/unless}}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    {{> "post-header"}}
 
     <div itemprop="articleBody">
+        <p>
         {{#if custom_excerpt}}
             {{excerpt}}
         {{else}}
             {{excerpt words="60"}}&hellip;
         {{/if}}
+        </p>
     </div>
     
-    <footer>
-        {{#if tags}}
-            <ul class="categories">
-                <li> Posted in </li>
-                {{#foreach tags}}
-                <li itemprop="articleSection">
-                    <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
-                </li>  
-                {{/foreach}}
-            </ul>
-        {{/if}}
-    </footer>
+    {{> "post-footer"}}
 </article>
