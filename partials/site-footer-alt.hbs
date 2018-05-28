@@ -1,0 +1,12 @@
+<footer class="site-footer">
+    <div class="container">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <nav class="site-footer-nav">            
+            <a href="{{@blog.url}}">Home</a>
+            <a href="/about">About</a>
+            <a class="social-link-github" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+            <a class="social-link-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+    </div>
+</footer>
