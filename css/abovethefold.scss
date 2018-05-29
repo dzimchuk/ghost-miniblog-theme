@@ -27,12 +27,12 @@ body {
 .container {
     max-width: 750px;
     margin: 0 auto;
-    padding: 0 1.5em;
+    padding: 0 1em;
 }
 
 .siteheader {
     text-align: right;
-    padding: .8em 1.5em 2em 1.5em;
+    padding: .8em 0 2em 0;
 
     p {
         font-size: 2em;
@@ -156,7 +156,7 @@ time {
         color: lighten($text_color, 30%);
         font-size: 1.3em;
         width: 90%;
-        margin: 1.5em auto;
+        margin: 1em auto;
         font-style: italic;
         font-weight: lighter;
 
@@ -166,7 +166,7 @@ time {
     }
 
     pre {
-        font-size: .9em;
+        font-size: .85em;
         line-height: 1.3;
         overflow: auto;
         padding: 5px 10px;
