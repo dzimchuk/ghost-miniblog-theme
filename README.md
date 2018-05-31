@@ -33,3 +33,7 @@ npm install -g nodemon@latest
 
 nodemon current/index.js --watch content/themes/ghost-miniblog-theme --ext hbs,js,css
 ```
+
+## Credits
+SVG icons by <https://simpleicons.org/>
+
